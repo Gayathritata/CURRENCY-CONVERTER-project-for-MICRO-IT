@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter</title>
+</head>
+<body>
+
+  <h2>USD to INR Converter</h2>
+
+  <input type="number" id="usd" placeholder="Enter amount in USD">
+  <button onclick="convert()">Convert</button>
+
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      var usd = document.getElementById("usd").value;
+      var rate = 83; // 1 USD = 83 INR (example rate)
+      var inr = usd * rate;
+      document.getElementById("result").innerText = "INR: ₹" + inr.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
